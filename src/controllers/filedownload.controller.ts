@@ -2,7 +2,6 @@
 
 // import {inject} from '@loopback/core';
 
-
 /* export class FiledownloadController {
   constructor() {}
 }
@@ -51,7 +50,7 @@ export class FiledownloadController {
     const files = await readdir(this.storageDirectory);
     return files;
   }
-  
+
   @get('/files/{filename}')
   @oas.response.file()
   downloadFile(

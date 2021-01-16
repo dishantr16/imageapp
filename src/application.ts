@@ -9,7 +9,7 @@ import {RestApplication} from '@loopback/rest';
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {MySequence} from './sequence';
-import {FILE_UPLOAD_SERVICE,STORAGE_DIRECTORY} from './keys';
+import {FILE_UPLOAD_SERVICE, STORAGE_DIRECTORY} from './keys';
 import multer from 'multer';
 
 export {ApplicationConfig};
@@ -43,8 +43,8 @@ export class ImageappApplication extends BootMixin(
       },
     };
   }
-  /* protected configureFileUpload(destination?: string){
-    destination = destination ?? path.join(__dirname,'../.sandbox');
+  protected configureFileUpload(destination?: string) {
+    destination = destination ?? path.join(__dirname, '../.sandbox');
     this.bind(STORAGE_DIRECTORY).to(destination);
     const multerOptions: multer.Options = {
       storage: multer.diskStorage({
@@ -57,5 +57,5 @@ export class ImageappApplication extends BootMixin(
     };
     // Configure the file upload service with multer options
     this.configure(FILE_UPLOAD_SERVICE).to(multerOptions);
-  } */
+  }
 }

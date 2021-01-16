@@ -1,4 +1,3 @@
-
 import {
   BindingScope,
   config,
